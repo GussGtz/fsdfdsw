@@ -11,7 +11,7 @@ import DashboardCard04 from '../partials/dashboard/DashboardCard04';
 import DashboardCard05 from '../partials/dashboard/DashboardCard05';
 import Banner from '../partials/Banner';
 
-function Dashboard() {
+function Pato() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -81,4 +81,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Pato;
