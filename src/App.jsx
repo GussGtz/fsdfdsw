@@ -11,6 +11,9 @@ import './charts/ChartjsConfig';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
+import Gallina from './pages/Gallina';
+import Pato from './pages/Pato';
+import Codorniz from './pages/Codorniz';
 
 function App() {
 
@@ -26,6 +29,9 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/gallina" element={<Gallina/>} />
+        <Route exact path="/pato" element={<Pato/>} />
+        <Route exact path="/codorniz" element={<Codorniz />} />
       </Routes>
     </>
   );
