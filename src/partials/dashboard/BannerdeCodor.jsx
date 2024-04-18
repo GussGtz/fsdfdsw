@@ -3,7 +3,6 @@ import React from 'react';
 function BannerCodor() {
   return (
     <div className="relative bg-indigo-200 dark:bg-indigo-500 p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
-      {/* Background illustration */}
       <div className="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
         <svg width="319" height="198" xmlnsXlink="http://www.w3.org/1999/xlink">
           <defs>
@@ -44,11 +43,9 @@ function BannerCodor() {
           </g>
         </svg>
       </div>
-
-      {/* Content */}
       <div className="relative">
-        <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Codorniz</h1>
-        <p className="text-black">Ave pequeña de la familia Phasianidae, que incluye a faisanes y pavos reales. Son originarias de Europa, África del Norte y Asia, y se han introducido en muchas otras partes del mundo debido a su valor como aves de caza y para la producción de carne y huevos. La codorniz es conocida por su tamaño compacto y su plumaje moteado, que proporciona camuflaje en su entorno natural. Son aves migratorias en algunas regiones, pero muchas poblaciones son residentes permanentes. Las codornices son omnívoras y se alimentan de una dieta variada que incluye semillas, insectos y vegetación.</p>
+        <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Paloma</h1>
+        <p className="text-black">Aves pertenecientes a la familia Columbidae y se encuentran en todo el mundo, con una gran diversidad de especies adaptadas a una amplia gama de hábitats, desde entornos urbanos hasta áreas rurales y selváticas. Se cree que las palomas han sido domesticadas por los humanos desde hace miles de años, y son conocidas por su capacidad para regresar a su hogar desde largas distancias, lo que las convierte en excelentes mensajeras. Son aves de tamaño mediano con un plumaje suave y colores variados, que van desde el gris y el blanco hasta el marrón y el negro. Las palomas son principalmente granívoras, pero también se alimentan de insectos y otros pequeños invertebrados. Son animales sociales que a menudo forman parejas monógamas y crían a sus crías en nidos construidos en lugares elevados como repisas de edificios o árboles.</p>
       </div>
     </div>
   );

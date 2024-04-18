@@ -53,7 +53,7 @@ const Sidebar = () => {
             activeClassName="text-white"
           >
             <img src={codornizIconUrl} alt="Codorniz Icon" className="w-12 h-12 mr-2" />
-            Codorniz
+            Paloma
           </NavLink>
         </li>
       </ul>
