@@ -8,7 +8,7 @@ function Modal({ isOpen, onClose, onConfirm }) {
       <div className="bg-white p-8 rounded-lg">
         <p className="mb-4">¿Estás seguro de que quieres terminar la incubación?</p>
         <div className="flex justify-end">
-          <button className="btn bg-red-500 hover:bg-red-600 text-white mr-2" onClick={onConfirm}>
+          <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white mr-2" onClick={onConfirm}>
             Confirmar
           </button>
           <button className="btn bg-gray-300 hover:bg-gray-400 text-gray-800" onClick={onClose}>
