@@ -14,7 +14,7 @@ function Header({ sidebarOpen, setSidebarOpen }) {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 -mb-px">
           {/* Header: Left side */}
-          <div className="flex">
+          <div className="flex items-center">
             {/* Hamburger button */}
             <button
               className="text-slate-500 hover:text-slate-600 lg:hidden"
@@ -32,6 +32,9 @@ function Header({ sidebarOpen, setSidebarOpen }) {
                 <rect x="4" y="17" width="16" height="2" />
               </svg>
             </button>
+            <div className="ml-3">
+              <div className="text-center text-lg font-bold text-slate-800 dark:text-slate-100">Incubadora Eggtravaganza</div>
+            </div>
           </div>
 
           {/* Header: Right side */}
