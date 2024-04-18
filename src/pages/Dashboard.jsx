@@ -7,7 +7,6 @@ import WelcomeBanner from '../partials/dashboard/WelcomeBanner';
 import DashboardCard01 from '../partials/dashboard/DashboardCard01';
 import DashboardCard02 from '../partials/dashboard/DashboardCard02';
 import DashboardCard03 from '../partials/dashboard/DashboardCard03';
-import Banner from '../partials/Banner';
 
 function Dashboard() {
 
