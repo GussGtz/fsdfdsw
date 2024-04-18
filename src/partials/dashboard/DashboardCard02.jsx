@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Icon from '../../images/icon-02.svg';
 
 function DashboardCard02() {
-  const imageUrl = 'https://st2.depositphotos.com/1000695/5456/i/600/depositphotos_54568453-stock-photo-one-duckling.jpg';
+  const imageUrl = 'https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-duck-poultry-white-transparent-png-image_6653169.png';
 
   return (
     <div className="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">

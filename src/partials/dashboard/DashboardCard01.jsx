@@ -4,7 +4,7 @@ import Icon from '../../images/icon-01.svg';
 
 function DashboardCard01() {
   // URL de la imagen
-  const imageUrl = 'https://media.istockphoto.com/id/466167557/es/foto/reci%C3%A9n-nacido-chick.jpg?s=612x612&w=0&k=20&c=_JhGqWTApMy4Z66naKxZUDGtZL_y3rPFADRESOPlZmg=';
+  const imageUrl = 'https://www.pnguniverse.com/wp-content/uploads/2022/03/Gallina-corree-3456023f.png';
 
   return (
     <div className="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
