@@ -1,9 +1,9 @@
 import React from 'react';
 
 function BannerGallina() {
+  const gallinaIconUrl = 'https://img1.picmix.com/output/stamp/normal/1/9/7/9/2379791_ebb93.gif';
   return (
     <div className="relative bg-indigo-200 dark:bg-indigo-500 p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
-      {/* Background illustration */}
       <div className="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
         <svg width="319" height="198" xmlnsXlink="http://www.w3.org/1999/xlink">
           <defs>
@@ -45,10 +45,14 @@ function BannerGallina() {
         </svg>
       </div>
 
-      {/* Content */}
-      <div className="relative">
-        <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Gallina</h1>
-        <p className="text-black">domesticadas a partir de la especie salvaje conocida como el gallo bankiva, se cree que tienen su origen en el sudeste asiático hace unos 8,000 años. Son aves de corral muy comunes, criadas principalmente por sus huevos y carne. Las gallinas son omnívoras, lo que significa que comen una variedad de alimentos, desde semillas y vegetales hasta insectos y pequeños animales. Son animales sociales que a menudo viven en grupos jerárquicos llamados "bandadas" y son conocidas por su cacareo característico. Las diferentes razas de gallinas se han desarrollado para adaptarse a diversos climas y propósitos, desde la producción de huevos hasta la exhibición en ferias avícolas.</p>
+      <div className="relative flex items-center">
+        <div className="flex flex-col">
+          <div className="flex items-center mb-2">
+          <img src={gallinaIconUrl} alt="Gallina Icon" className="w-12 h-12 mr-2" />
+            <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Gallina</h1>
+          </div>
+          <p className="text-black">Las gallinas, domesticadas a partir de la especie salvaje conocida como el gallo bankiva, se cree que tienen su origen en el sudeste asiático hace unos 8,000 años. Son aves de corral muy comunes, criadas principalmente por sus huevos y carne. Las gallinas son omnívoras, lo que significa que comen una variedad de alimentos, desde semillas y vegetales hasta insectos y pequeños animales. Son animales sociales que a menudo viven en grupos jerárquicos llamados "bandadas" y son conocidas por su cacareo característico.</p>
+        </div>
       </div>
     </div>
   );

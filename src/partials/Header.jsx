@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import SearchModal from '../components/ModalSearch';
-import Notifications from '../components/DropdownNotifications';
-import Help from '../components/DropdownHelp';
-import UserMenu from '../components/DropdownProfile';
+// import SearchModal from '../components/ModalSearch';
+// import Notifications from '../components/DropdownNotifications';
+// import Help from '../components/DropdownHelp';
+// import UserMenu from '../components/DropdownProfile';
 import ThemeToggle from '../components/ThemeToggle';
 
 function Header({ sidebarOpen, setSidebarOpen }) {
@@ -33,7 +33,7 @@ function Header({ sidebarOpen, setSidebarOpen }) {
               </svg>
             </button>
             <div className="ml-3">
-              <div className="text-center text-lg font-bold text-slate-800 dark:text-slate-100">Incubadora Eggtravaganza</div>
+              <div className="text-center text-2xl font-bold w-full text-slate-800 dark:text-slate-100">Incubadora Eggtravaganza</div>
             </div>
           </div>
 

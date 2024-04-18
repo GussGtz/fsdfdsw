@@ -1,6 +1,7 @@
 import React from 'react';
 
 function BannerPato() {
+  const patoIconUrl = 'https://i.gifer.com/XOsX.gif';
   return (
     <div className="relative bg-indigo-200 dark:bg-indigo-500 p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
       {/* Background illustration */}
@@ -45,9 +46,14 @@ function BannerPato() {
         </svg>
       </div>
 
-      <div className="relative">
-        <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Pato</h1>
-        <p className="text-black">Aves acuáticas pertenecientes a la familia Anatidae, que también incluye gansos y cisnes. Se cree que los patos tienen su origen en Eurasia y América del Norte. Son conocidos por su capacidad para nadar y bucear gracias a sus patas palmeadas y su impermeable plumaje. Los patos son omnívoros, alimentándose de una variedad de alimentos, incluyendo plantas acuáticas, insectos, peces y crustáceos. Son aves migratorias, algunas especies viajan grandes distancias durante las temporadas de migración. </p>
+      <div className="relative flex items-center">
+        <div className="flex flex-col">
+          <div className="flex items-center mb-2">
+          <img src={patoIconUrl} alt="Pato Icon" className="w-12 h-12 mr-2" />
+            <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Pato</h1>
+          </div>
+          <p className="text-black">Aves acuáticas pertenecientes a la familia Anatidae, que también incluye gansos y cisnes. Se cree que los patos tienen su origen en Eurasia y América del Norte. Son conocidos por su capacidad para nadar y bucear gracias a sus patas palmeadas y su impermeable plumaje. Los patos son omnívoros, alimentándose de una variedad de alimentos, incluyendo plantas acuáticas, insectos, peces y crustáceos. Son aves migratorias, algunas especies viajan grandes distancias durante las temporadas de migración.</p>
+        </div>
       </div>
     </div>
   );

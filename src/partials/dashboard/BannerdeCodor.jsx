@@ -1,6 +1,8 @@
 import React from 'react';
 
 function BannerCodor() {
+  const codornizIconUrl = 'https://www.clipartbest.com/cliparts/bTy/pX4/bTypX4rnc.gif';
+
   return (
     <div className="relative bg-indigo-200 dark:bg-indigo-500 p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
       <div className="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
@@ -43,9 +45,14 @@ function BannerCodor() {
           </g>
         </svg>
       </div>
-      <div className="relative">
-        <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Paloma</h1>
-        <p className="text-black">Aves pertenecientes a la familia Columbidae y se encuentran en todo el mundo, con una gran diversidad de especies adaptadas a una amplia gama de hábitats, desde entornos urbanos hasta áreas rurales y selváticas. Se cree que las palomas han sido domesticadas por los humanos desde hace miles de años, y son conocidas por su capacidad para regresar a su hogar desde largas distancias, lo que las convierte en excelentes mensajeras. Son aves de tamaño mediano con un plumaje suave y colores variados, que van desde el gris y el blanco hasta el marrón y el negro. Las palomas son principalmente granívoras, pero también se alimentan de insectos y otros pequeños invertebrados. Son animales sociales que a menudo forman parejas monógamas y crían a sus crías en nidos construidos en lugares elevados como repisas de edificios o árboles.</p>
+      <div className="relative flex items-center">
+        <div className="flex flex-col">
+          <div className="flex items-center mb-2">
+            <img src={codornizIconUrl} alt="Codorniz Icon" className="w-12 h-12 mr-2" />
+            <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Paloma</h1>
+          </div>
+          <p className="text-black">Aves pertenecientes a la familia Columbidae y se encuentran en todo el mundo, con una gran diversidad de especies adaptadas a una amplia gama de hábitats, desde entornos urbanos hasta áreas rurales y selváticas. Se cree que las palomas han sido domesticadas por los humanos desde hace miles de años, y son conocidas por su capacidad para regresar a su hogar desde largas distancias, lo que las convierte en excelentes mensajeras. Son aves de tamaño mediano con un plumaje suave y colores variados, que van desde el gris y el blanco hasta el marrón y el negro. Las palomas son principalmente granívoras, pero también se alimentan de insectos y otros pequeños invertebrados. Son animales sociales que a menudo forman parejas monógamas y crían a sus crías en nidos construidos en lugares elevados como repisas de edificios o árboles.</p>
+        </div>
       </div>
     </div>
   );
