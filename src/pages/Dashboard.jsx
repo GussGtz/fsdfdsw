@@ -11,10 +11,12 @@ import AnnouncementCard from '../partials/dashboard/Anuncio';
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [timerId, setTimerId] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
 
   const handleArrowClick = () => {
-    setSidebarOpen(!sidebarOpen); 
-    clearTimeout(timerId); 
+    setSidebarOpen(!sidebarOpen);
+    clearTimeout(timerId);
   };
 
   const handleMouseLeave = () => {
@@ -23,6 +25,15 @@ function Dashboard() {
         setSidebarOpen(false);
       }, 5000)
     );
+  };
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   useEffect(() => {
@@ -52,14 +63,24 @@ function Dashboard() {
               </div>
             </div>
             <div className="grid grid-cols-12 gap-6">
-              <DashboardCard01 />
-              <DashboardCard02 />
+              <DashboardCard01 onClick={() => handleCardClick('dashboardcard01')} />
+              <DashboardCard02 onClick={() => handleCardClick('dashboardcard02')} />
               <DashboardCard03 />
-              <AnnouncementCard /> {/* Nueva card de anuncio */}
+              <AnnouncementCard />
             </div>
           </div>
         </main>
       </div>
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded">
+            <p>{`Espera los nuevos huevos próximamente en la card ${selectedCard}...`}</p>
+            <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white mt-4" onClick={closeModal}>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

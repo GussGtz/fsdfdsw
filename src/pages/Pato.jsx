@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import DashboardCard04 from '../partials/dashboard/DashboardCard04';
@@ -9,9 +10,10 @@ import Modal from './ModalTerminar';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 
 function Pato() {
+  const navigate = useNavigate(); // Instancia de navigate
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [timerId, setTimerId] = useState(null);
+  const [showGraphCards, setShowGraphCards] = useState(true); // Nuevo estado
 
   const handleTerminate = () => {
     setIsModalOpen(true);
@@ -19,6 +21,8 @@ function Pato() {
 
   const handleConfirmTerminate = () => {
     setIsModalOpen(false);
+    setShowGraphCards(false); // Ocultar las cards de las gráficas
+    navigate('/'); // Redirigir al home
   };
 
   const handleCloseModal = () => {
@@ -27,22 +31,11 @@ function Pato() {
 
   const handleShowSidebar = () => {
     setSidebarOpen(true);
-    clearTimeout(timerId);
   };
 
   const handleHideSidebar = () => {
-    setTimerId(
-      setTimeout(() => {
-        setSidebarOpen(false);
-      }, 4000)
-    );
+    setSidebarOpen(false);
   };
-
-  useEffect(() => {
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [timerId]);
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -74,10 +67,12 @@ function Pato() {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-12 gap-6">
-              <DashboardCard04 />
-              <DashboardCard05 />
-            </div>
+            {showGraphCards && ( // Mostrar las cards de las gráficas si showGraphCards es true
+              <div className="grid grid-cols-12 gap-6">
+                <DashboardCard04 />
+                <DashboardCard05 />
+              </div>
+            )}
           </div>
         </main>
         <Banner />

@@ -44,28 +44,6 @@ const Sidebar = () => {
             Pato
           </NavLink>
         </li>
-        <li className="my-2">
-          <NavLink
-            to="/gallina"
-            className="flex items-center justify-center py-2 text-slate-400 hover:text-white"
-            activeClassName="text-white"
-            onClick={toggleSidebar}
-          >
-            <img src={gallinaIconUrl} alt="Gallina Icon" className="w-12 h-12 mr-2" />
-            Gallina
-          </NavLink>
-        </li>
-        <li className="my-2">
-          <NavLink
-            to="/codorniz"
-            className="flex items-center justify-center py-2 text-slate-400 hover:text-white"
-            activeClassName="text-white"
-            onClick={toggleSidebar}
-          >
-            <img src={codornizIconUrl} alt="Codorniz Icon" className="w-12 h-12 mr-2" />
-            Paloma
-          </NavLink>
-        </li>
       </ul>
     </div>
   );
