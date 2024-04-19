@@ -6,6 +6,7 @@ import DashboardCard01 from '../partials/dashboard/DashboardCard01';
 import DashboardCard02 from '../partials/dashboard/DashboardCard02';
 import DashboardCard03 from '../partials/dashboard/DashboardCard03';
 import { FaArrowRight } from 'react-icons/fa';
+import AnnouncementCard from '../partials/dashboard/Anuncio';
 
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -45,8 +46,7 @@ function Dashboard() {
                 <button
                   className="btn bg-indigo-500 hover:bg-indigo-600 text-white"
                   onClick={handleArrowClick}
-                  onMouseLeave={handleMouseLeave}
-                >
+                  onMouseLeave={handleMouseLeave}>
                   <FaArrowRight className="w-4 h-4 fill-current opacity-50 shrink-0" />
                 </button>
               </div>
@@ -55,6 +55,7 @@ function Dashboard() {
               <DashboardCard01 />
               <DashboardCard02 />
               <DashboardCard03 />
+              <AnnouncementCard /> {/* Nueva card de anuncio */}
             </div>
           </div>
         </main>
