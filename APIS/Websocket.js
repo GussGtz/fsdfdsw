@@ -60,6 +60,6 @@ app.get('/datos', (req, res) => {
 });
 
 
-httpServer.listen(8082, () => {
+httpServer.listen(3306, () => {
   console.log("Servidor en el puerto 8082");
 });

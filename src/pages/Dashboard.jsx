@@ -64,8 +64,8 @@ function Dashboard() {
             </div>
             <div className="grid grid-cols-12 gap-6">
               <DashboardCard01 onClick={() => handleCardClick('dashboardcard01')} />
-              <DashboardCard02 onClick={() => handleCardClick('dashboardcard02')} />
-              <DashboardCard03 />
+              <DashboardCard02 />
+              <DashboardCard03 onClick={() => handleCardClick('dashboardcard03')} />
               <AnnouncementCard />
             </div>
           </div>
