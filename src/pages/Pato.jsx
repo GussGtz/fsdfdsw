@@ -10,10 +10,13 @@ import Modal from './ModalTerminar';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 
 function Pato() {
-  const navigate = useNavigate(); // Instancia de navigate
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showGraphCards, setShowGraphCards] = useState(true); // Nuevo estado
+  const [showGraphCards, setShowGraphCards] = useState(true);
+  const [showCongratulationsModal, setShowCongratulationsModal] = useState(false);
+
+  const gift = "https://i.gifer.com/SodH.gif";
 
   const handleTerminate = () => {
     setIsModalOpen(true);
@@ -21,8 +24,8 @@ function Pato() {
 
   const handleConfirmTerminate = () => {
     setIsModalOpen(false);
-    setShowGraphCards(false); // Ocultar las cards de las gráficas
-    navigate('/'); // Redirigir al home
+    setShowGraphCards(false);
+    navigate('/');
   };
 
   const handleCloseModal = () => {
@@ -36,6 +39,40 @@ function Pato() {
   const handleHideSidebar = () => {
     setSidebarOpen(false);
   };
+
+  const handleManualCloseCongratulationsModal = () => {
+    setShowCongratulationsModal(false);
+  };
+
+  useEffect(() => {
+    const congratulationsTimeout = setTimeout(() => {
+      setShowCongratulationsModal(true);
+    }, 4000);
+
+    const closeCongratulationsModalTimeout = setTimeout(() => {
+      setShowCongratulationsModal(false);
+    }, 9500);
+
+    return () => {
+      clearTimeout(congratulationsTimeout);
+      clearTimeout(closeCongratulationsModalTimeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    const secondCongratulationsTimeout = setTimeout(() => {
+      setShowCongratulationsModal(true);
+    }, 15000);
+
+    const closeSecondCongratulationsModalTimeout = setTimeout(() => {
+      setShowCongratulationsModal(false);
+    }, 70000);
+
+    return () => {
+      clearTimeout(secondCongratulationsTimeout);
+      clearTimeout(closeSecondCongratulationsModalTimeout);
+    };
+  }, []);
 
   return (
     <div className="flex h-screen overflow-hidden">
@@ -67,7 +104,7 @@ function Pato() {
                 </button>
               </div>
             </div>
-            {showGraphCards && ( // Mostrar las cards de las gráficas si showGraphCards es true
+            {showGraphCards && (
               <div className="grid grid-cols-12 gap-6">
                 <DashboardCard04 />
                 <DashboardCard05 />
@@ -77,6 +114,21 @@ function Pato() {
         </main>
         <Banner />
         <Modal isOpen={isModalOpen} onClose={handleCloseModal} onConfirm={handleConfirmTerminate} />
+        {showCongratulationsModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-4 rounded text-center">
+              <p>¡Felicidades ha eclosionado tu huevo!</p>
+              {gift && (
+              <div className="flex justify-center items-center">
+                <img src={gift} alt="huevito" className="w-30 h-40 mb-2" />
+              </div>
+            )}
+              <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white mt-4" onClick={handleManualCloseCongratulationsModal}>
+                Cerrar
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
